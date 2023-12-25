@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram-Login</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e6591b0c58.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="images">
+            <div class="inner">
+                <img class="image" src="assets/screenshot1.png" alt="">
+                <img class="image" src="assets/screenshot2.png" alt="">
+                <img class="image" src="assets/screenshot3.png" alt="">
+                <img class="image" src="assets/screenshot4.png" alt="">
+            </div>
+        </div>
+        <div class="login">
+            <div class="info">
+                <div class="logo"><img src="assets/1658587465instagram-name-logo.png" alt=""></div>
+                <div class="description">Sign up to see photos and videos <br> from your friends.</div>
+                <a href="#" class="facebook"> <i class="fa-brands fa-facebook"></i> Log in with Facebook</a>
+                <div class="over">━━━━━━━━ OR ━━━━━━━━</div>
+                <div class="info1">
+                    <form action="">
+                        <input type="tel" placeholder="Mobile number or email address">
+                        <input type="text" placeholder="Full Name">
+                        <input type="text" placeholder="Username">
+                        <input type="text" placeholder="Password">
+                    </form>
+                </div>
+                <div class="guidelines"><p>People who use our service may have uploaded your contact information to Instagram. <a href="">Learn more</a></p>
+
+                <p>By signing up, you agree to our <a href="#">Privacy Policy</a> and <a href="#">Cookies Policy</a>.</p></div>
+                <a href="" class="sign-up">Sign Up</a>
+            </div>
+            <div class="acc-info">Have an account? <a href="">Log in</a></div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          // Get all image elements and store them in an array
+          const images = document.querySelectorAll(".image");
+          
+          let currentIndex = 0;
+      
+          function showImage(index) {
+            // Hide all images
+            images.forEach(image => image.style.opacity = 0);
+      
+            // Show the current image
+            images[index].style.opacity = 1;
+          }
+      
+          function cycleImages() {
+            // Increment index and reset to 0 if it exceeds the number of images
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+          }
+      
+          // Initial display
+          showImage(currentIndex);
+      
+          // Set an interval to cycle images every 3 seconds (adjust as needed)
+          setInterval(cycleImages, 3000);
+        });
+      </script>
+</body>
+</html>
